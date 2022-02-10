@@ -28,7 +28,6 @@ class _MyAppState extends State<MyApp> {
   //It must be created after permission is granted.
   Future<void> initScreenshotCallback() async {
     screenshotCallback = ScreenshotCallback();
-
     screenshotCallback.addListener(() {
       setState(() {
         text = "Screenshot callback Fired!";
@@ -42,7 +41,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void dispose() {
-    screenshotCallback.dispose();
+
     super.dispose();
   }
 
