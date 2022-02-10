@@ -1,9 +1,7 @@
-import 'dart:io';
 import 'dart:async';
 
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class ScreenshotCallback {
   static const MethodChannel _channel =
@@ -54,5 +52,4 @@ class ScreenshotCallback {
   /// Checks if user has granted permissions for storage.
   ///
   /// If permission is not granted, it'll be requested.
-  Future<void> checkPermission() async => await Permission.storage.request();
 }
